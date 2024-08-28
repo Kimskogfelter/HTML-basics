@@ -56,17 +56,53 @@
         <!-- figcaption: ange en bildtext -->
         <figcaption>Ett filmklipp på en fågel</figcaption>
         <!-- video: ett videoklipp, använd attributet controls för att få play och stopp knappar etc -->
-        <video src="https://upload.wikimedia.org/wikipedia/commons/2/20/Pycnonotus_goiavier.webm" width="400px" controls></video>
+        <video src="https://upload.wikimedia.org/wikipedia/commons/2/20/Pycnonotus_goiavier.webm" width="400px"
+            controls></video>
 
-        
+
         <figcaption>
             <!-- använda attributet target för att navigeringsklick ska öppnas i ett nytt fönster -->
-            <a href="https://commons.wikimedia.org/wiki/File:Pycnonotus_goiavier.webm" target="_blank">Joaquim Baeta</a>, 
-            <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">CC BY 4.0</a>, via Wikimedia Commons</figcaption>
+            <a href="https://commons.wikimedia.org/wiki/File:Pycnonotus_goiavier.webm" target="_blank">Joaquim
+                Baeta</a>,
+            <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">CC BY 4.0</a>, via Wikimedia Commons
+        </figcaption>
     </figure>
 
+    <!-- ett alternativt sätt att visa ett videoklipp är att använda ngn form av inbäddningskod, ex elementet iframe -->
 
+    <iframe src="https://commons.wikimedia.org/wiki/File:Pycnonotus_goiavier.webm?embedplayer=yes" width="512"
+        height="288" frameborder="0" loading="lazy" allow="autoplay; picture-in-picture" allowfullscreen>
+
+
+    </iframe>
+    <div>
+        Joaquim Baeta, CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons
+    </div>
+
+    <!-- en iframe kan med fördel omslutas med elementet figure -->
+
+    <!-- om iframe används finns ofta attribut width och height angivna... vill man ha miniatyrer så får man manuellt kanske räkna lite... -->
+
+    <!-- width="512" height="288" ... kan proportienelligt bli  -->
+
+    <!-- 512/288 = 1,777 -->
+    <!-- om bredden ska vara 120, är då höjden.... 120/1.777 = 68 -->
+
+    <iframe src="https://commons.wikimedia.org/wiki/File:Pycnonotus_goiavier.webm?embedplayer=yes" width="120"
+        height="68" frameborder="0" loading="lazy" allow="autoplay; picture-in-picture" allowfullscreen>
+    </iframe>
+
+<hr>
+
+<!-- mediasajter som tex Youtube tillhandahåller oftast kod så man kan bädda in videon -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GIhcL8K4shg?si=ROUW34h-AwEXeEz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
     
+</iframe>
+
+
+
+
 
 
 
