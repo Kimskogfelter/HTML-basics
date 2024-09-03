@@ -8,122 +8,123 @@
 </head>
 
 <body>
-
     <hr>
 
-    <!-- Navigera till sidor -->
-
+    <!-- navigera till sidor -->
     <!-- a: element för att skapa länkar (anchor) -->
-
-    <!-- nav: ett omslutande element för att ex navigera i en meny -->
+    <!-- nav: ett omslutande element för ex navigera i en meny -->
 
     <nav>
         <a href="/">Startsida</a> |
         <a href="block-elements.html">Block element</a> |
         <a href="semantic-elements.html">Semantiska element</a> |
-        <a href="media.html">Media</a> |
+        <a href="media.html">Bilder, video ...</a>
         <a href="inline-elements.html">Inline elements</a>
-        <a href="gallery.html">Gallery</a>
-
+        <a href="form.html">Formulär</a>
+        <a href="gallery.html">Galleri</a>
     </nav>
 
     <hr>
 
+
     <h1>Olika media filer</h1>
-    <!-- en bild med "absolut" sökväg med adress som ex inleds https:// -->
+
+    <!-- en bild med "absolut" sökväg med adress som ex inleds https://... -->
     <!-- img: element för att koda in en bild på sidan -->
 
-    <img src="https://www.filminstitutet.se/globalassets/2.-fa-kunskap-om-film/ta-del-av-filmsamlingarna/filmbilder/web-pelle-svanslos_001---kopia.jpg?aimgsz=W1120"
-        alt="Pelle Svanslös and Maja Gräddnos sitting next to eachother" width="400px">
+    <img src="https://images.interactives.dk/1606249669-SHNQjfXuCAN7C3TpHXpDsg.jpg" alt="En solnedgång i havsmiljö"
+        width="400">
 
-    <!-- en bild med "relativ" sökväg, relativ i förhållande till den här filen -->
+    <!-- en bild med "relativ" sökväg, relativ i förhållande till den här filen... -->
     <!-- img: element för att koda in en bild på sidan -->
 
-    <img src="images/web-pelle-svanslos_001---kopia.jpg"
-        alt="Pelle Svanslös and Maja Gräddnos sitting next to eachother" width="400px">
+    <img src="images/sunset.jpg" alt="En solnedgång i havsmiljö" width="400">
+
 
     <br>
 
-    En bild kodas in med elementet img. Det är ett så kallat inline element
-
-    <img src="https://cdn.shopify.com/s/files/1/0768/5626/2988/files/super-mario-ursprung_480x480.png?v=1697892495"
-        alt="Super Mario running" width="100px">
+    En bild kodas in med elementet img. Det är ett så kallat inline element.
+    <img src="https://th.bing.com/th/id/OIP.sV94qXLtAybU1S8_e0Pj9wHaE8?rs=1&pid=ImgDetMain"
+        alt="En sommardag i en skogsmiljö." width="100">
 
     <hr>
 
-    <!-- figure: olika mediefiler (bild, video, ljud) kan med fördel kodas med omslutande element -->
-
+    <h4>Wikimedia video element</h4>
+    <!-- figure: olika mediafiler (bild, video, ljud) kan med fördel kodas med omslutande elementet -->
     <figure>
-        <!-- figcaption: ange en bildtext -->
-        <figcaption>Ett filmklipp på en fågel</figcaption>
-        <!-- video: ett videoklipp, använd attributet controls för att få play och stopp knappar etc -->
-        <video src="https://upload.wikimedia.org/wikipedia/commons/2/20/Pycnonotus_goiavier.webm" width="400px"
+
+        <!-- figcaption - ange en bildtext -->
+        <figcaption>Ett filmklipp på en fågel.</figcaption>
+
+        <!-- video: ett videoklipp, använd attributet controls för att få play och stop knappar etc -->
+        <video src="https://upload.wikimedia.org/wikipedia/commons/2/20/Pycnonotus_goiavier.webm" width="400"
             controls></video>
 
-
         <figcaption>
-            <!-- använda attributet target för att navigeringsklick ska öppnas i ett nytt fönster -->
+
+            <!-- använd attributet target och värdet _blank för att navigeringsklick ska öppnas i ett nytt fönster -->
+
+            <!-- absolut skväg, adress som inled http: -->
             <a href="https://commons.wikimedia.org/wiki/File:Pycnonotus_goiavier.webm" target="_blank">Joaquim
                 Baeta</a>,
             <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">CC BY 4.0</a>, via Wikimedia Commons
         </figcaption>
+
     </figure>
 
+
     <!-- ett alternativt sätt att visa ett videoklipp är att använda ngn form av inbäddningskod, ex elementet iframe -->
-
+    <h4>Wikimedia iframe klipp</h4>
     <iframe src="https://commons.wikimedia.org/wiki/File:Pycnonotus_goiavier.webm?embedplayer=yes" width="512"
-        height="288" frameborder="0" loading="lazy" allow="autoplay; picture-in-picture" allowfullscreen>
+        height="288" frameborder="0" loading="lazy" allow="autoplay; picture-in-picture" allowfullscreen></iframe>
+
+    <!-- En iframe kan med fördel omslutas med elementet figure -->
 
 
-    </iframe>
-    <div>
-        Joaquim Baeta, CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons
-    </div>
+    <!-- om ifram används finns ofta attributen width och height angivna...vill man ha miniytarer så får man kanske manuellt räkna lite... ->
 
-    <!-- en iframe kan med fördel omslutas med elementet figure -->
+    <!-- width="512" height="288" ... kan proportionellt bli  -->
 
-    <!-- om iframe används finns ofta attribut width och height angivna... vill man ha miniatyrer så får man manuellt kanske räkna lite... -->
+    <!-- 512/288 = 1.777  -->
+    <!-- Om bredden ska vara 120, är då höjden.... 120/1.777 =  68  -->
+    <!-- width="120" height="68" -->
 
-    <!-- width="512" height="288" ... kan proportienelligt bli  -->
-
-    <!-- 512/288 = 1,777 -->
-    <!-- om bredden ska vara 120, är då höjden.... 120/1.777 = 68 -->
-
+    <h4>Wikimedia iframe klipp</h4>
     <iframe src="https://commons.wikimedia.org/wiki/File:Pycnonotus_goiavier.webm?embedplayer=yes" width="120"
-        height="68" frameborder="0" loading="lazy" allow="autoplay; picture-in-picture" allowfullscreen>
-    </iframe>
+        height="68" frameborder="0" loading="lazy" allow="autoplay; picture-in-picture" allowfullscreen></iframe>
 
-<hr>
+    <hr>
 
-<!-- mediasajter som tex Youtube tillhandahåller oftast kod så man kan bädda in videon -->
+    <!-- Mediasajter som ex Youtube, Vimeo tillhandahåller ofta kod för att dela - bädda in klipp  -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GIhcL8K4shg?si=ROUW34h-AwEXeEz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    
-</iframe>
+    <h4>Youtube klipp</h4>
 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nLxlfZ5izLE?si=bxGHiXx8a0jxM6ds"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<hr>
+    <hr>
 
-<h4>Wikimedia iframe klipp ljudfil</h4>
+    <h4>Wikimedia audio klipp ljudfil</h4>
 
-<!-- audio: för att kunna spela upp ett ljudklipp på sidan -->
+    <!-- audio: element för att kunna spela upp ett ljudklipp på sidan  -->
+    <figure>
+        <figcaption>En koltrast (Oona Räisänen (Mysid), Public domain, via Wikimedia Commons)</figcaption>
 
-<figure>
-    <figcaption>En skrikande älg</figcaption>
-    <audio src="https://upload.wikimedia.org/wikipedia/commons/8/88/American_Elk_Bugling.ogg" controls></audio>
-    <br>
-Jim Pisarowicz, Public domain, via Wikimedia Commons
-</figure>
-
-
-
-<h4>Sveriges Radio iframe ljudklipp</h4>
-
-<iframe title="Inbäddat innehåll från Sveriges Radio" width="100%" height="150" src="https://sverigesradio.se/embed/episode/2413772" frameborder="0"></iframe>
+        <!-- relativ sökväg - adressen pekar på projektets mappsystm -->
+        <audio src="audios/Turdus_merula_2.ogg" controls></audio>
+    </figure>
 
 
-<!-- Relativ sökväg - använd datorns mappsystem -->
-<!--Absolut sökväg - använd direkt länk till källan??  -->
+
+    <h4>Sveriges radio iframe klipp</h4>
+
+    <iframe title="Inbäddat innehåll från Sveriges Radio" width="100%" height="150"
+        src="https://sverigesradio.se/embed/episode/2413772" frameborder="0"></iframe>
+
+    <hr>
+
 
 </body>
 

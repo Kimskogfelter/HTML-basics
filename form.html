@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulär</title>
+</head>
+
+<body>
+
+    <hr>
+
+    <!-- navigera till sidor -->
+    <!-- a: element för att skapa länkar (anchor) -->
+    <!-- nav: ett omslutande element för ex navigera i en meny -->
+
+    <nav>
+        <a href="/">Startsida</a> |
+        <a href="block-elements.html">Block element</a> |
+        <a href="semantic-elements.html">Semantiska element</a> |
+        <a href="media.html">Bilder, video ...</a>
+        <a href="inline-elements.html">Inline elements</a>
+        <a href="form.html">Formulär</a>
+        <a href="gallery.html">Galleri</a>
+    </nav>
+
+    <hr>
+
+
+    <h1>Ett formulär för att skicka data</h1>
+
+    <!-- OBS - elementet br används här nedan för att få bättre layout, en layout som istället gör med CSS senare -->
+
+
+    <!-- form: omslutande element för ett formulär -->
+    <!-- form method ska oftast vara 'post', men i VS Code Live Server ger det ett http error:405 -->
+    <!-- använd här method 'get' -->
+    <form action="" method="post">
+
+        <!-- input: fält med olika möjligheter via attributet type -->
+
+        <p>
+            <!-- label: ange en förklaring till ett fält -->
+            <!-- se till att matcha värdet för attributet for (label) med ett id fält ex input -->
+            <label for="name">Ange ditt namn:</label>
+            <br>
+            <!-- använd attributet 'name' för att innehåll ska skickas -->
+            <input type="text" id="name" name="name">
+        </p>
+
+        <p>
+            <label for="first_name">Förnamn:</label>
+            <br>
+            <input type="text" name="first_name" id="first_name">
+        </p>
+
+        <p>
+            <label for="last_name">Efternamn:</label>
+            <br>
+            <input type="text" name="last_name" id="last_name" required>
+        </p>
+
+        <p>
+            <label for="age">Ålder:</label>
+            <br>
+            <input type="number" name="age" id="age" min="11" max="118">
+        </p>
+
+        <p>
+            <label for="email">E-post:</label>
+            <br>
+            <input type="email" name="email" id="email">
+        </p>
+
+        <p>
+            <label for="password">Ange lösenord när du registrerar dig (ska vara svårt att gissa):</label>
+            <br>
+            <input type="password" name="password" id="password">
+        </p>
+
+        <p>
+
+        <fieldset>
+            <legend>Vad är du intresserad av:</legend>
+            <input type="checkbox" name="html" id="html"><label for="html">HTML</label>
+            <br>
+            <input type="checkbox" name="swedish" id="swedish"><label for="swedish">Svenska</label>
+            <br>
+            <input type="checkbox" name="english" id="english"><label for="english">Engelska</label>
+        </fieldset>
+
+        </p>
+
+        <p>
+            <label for="country">Ange land:</label>
+            <!-- select: skapar en lista av olika värden, ett omslutande element för en eller flera option element -->
+            <select name="country" id="country">
+                <option value="sweden">Sverige</option>
+                <!-- option: ett värde, med attributet 'selected' kan ett förvalt värde bestämmas -->
+                <option value="norway" selected>Norge</option>
+                <option value="denmark">Danmark</option>
+            </select>
+        </p>
+
+
+        <input type="submit" value="Skicka">
+        <input type="reset" value="Nollställ">
+    </form>
+
+</body>
+
+</html>

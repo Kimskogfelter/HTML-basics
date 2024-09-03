@@ -11,47 +11,86 @@
 
     <hr>
 
-    <!-- Navigera till sidor -->
-
+    <!-- navigera till sidor -->
     <!-- a: element för att skapa länkar (anchor) -->
-
-    <!-- nav: ett omslutande element för att ex navigera i en meny -->
+    <!-- nav: ett omslutande element för ex navigera i en meny -->
 
     <nav>
         <a href="/">Startsida</a> |
         <a href="block-elements.html">Block element</a> |
         <a href="semantic-elements.html">Semantiska element</a> |
-        <a href="media.html">Media</a> |
+        <a href="media.html">Bilder, video ...</a>
         <a href="inline-elements.html">Inline elements</a>
-        <a href="gallery.html">Gallery</a>
-
+        <a href="form.html">Formulär</a>
+        <a href="gallery.html">Galleri</a>
     </nav>
 
     <hr>
 
     <!-- element som talar om vad innehållet är -->
-    <!-- ex: article, header, main, footer -->
+    <!-- ex; article, header, main, footer -->
 
     <header>
         <!-- header: element för sidhuvud -->
-        <!-- här kan man tex ange sidans identitet, logotype, bild etc -->
+        <!-- här kan man ex ange sidans identitet, logotype, bild ... -->
 
         En sida om semantiska element
 
     </header>
 
     <main>
-        <!-- main: element för det huvudsakliga/viktigaste innehållet -->
+        <!-- main: element för det viktigaste innehållet -->
+        <h1>En mallsida för hur man kan strukturera en sida innehållsmässigt</h1>
 
-        <h1>En mallsida för hur man strukturerar en sida innehållsmässigt</h1>
+
+        <!-- ex ett eller flera galleri med bilder, video, ljud -->
+
+        <!-- article: element för att omsluta ngt som kan liknas vid en artikel, en blogg ... -->
+
+        <article>
+            <h2>Om Lorem ipsum</h2>
+
+            <p>
+                Lorem ipsum är en typ av 'låtsastext' 
+                - en text som används för att kunna formge en webbsida grafiskt. Det är text som
+                har en lång historisk bakgrund. För att generera den texten i VS Code så kan man
+                skriva inledningen på ordet, i stil med lore... Då kommer editorn att föreslå
+                funktionalitet för att infoga platshållartext - lorem ipsum. Så här kan de se ut: 
+            </p>
+
+            <!-- blockquote: element för att skriva ett blockcitat - en längre stycke text -->
+            <blockquote>
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod reiciendis obcaecati totam eveniet, molestias reprehenderit ratione! Facere, nihil ea laudantium nemo minima beatae modi ipsum excepturi ratione nostrum quisquam odit."
+            </blockquote>
+
+            <p>
+                Läs mer om Lorem ipsum på följande sida: <a href="https://www.lipsum.com/" target="_blank">https://www.lipsum.com/</a>
+            </p>
+
+        </article>
+
+        <article>
+            <h2>Om semantiska element i HTML</h2>
+
+            <p>
+                I HTML finns det olika semantiska element som används för att ska en tydlig struktur...
+            </p>
+
+        </article>
+
 
     </main>
 
+
+    <aside>
+        <!-- aside: elementet används för att ange ngn form av innehåll som inte direkt handlar om själva sidan, men ändå kan ha viss betydelse eller hjälp -->
+    </aside>
+
+    <hr>
+
     <footer>
         <!-- footer: element för sidfot -->
-
         Tips om att koda HTML
-
     </footer>
 
 </body>

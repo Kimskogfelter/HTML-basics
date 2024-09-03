@@ -1,125 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=I, initial-scale=1.0">
-    <title>Inline elements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline element</title>
 </head>
-
 <body>
 
     <hr>
 
-    <!-- Navigera till sidor -->
-
+    <!-- navigera till sidor -->
     <!-- a: element för att skapa länkar (anchor) -->
-
-    <!-- nav: ett omslutande element för att ex navigera i en meny -->
+    <!-- nav: ett omslutande element för ex navigera i en meny -->
 
     <nav>
         <a href="/">Startsida</a> |
         <a href="block-elements.html">Block element</a> |
         <a href="semantic-elements.html">Semantiska element</a> |
-        <a href="media.html">Media</a> |
+        <a href="media.html">Bilder, video ...</a>
         <a href="inline-elements.html">Inline elements</a>
-        <a href="gallery.html">Gallery</a>
-
+        <a href="form.html">Formulär</a>
+        <a href="gallery.html">Galleri</a>
     </nav>
 
     <hr>
 
-    <h1>Inline elements</h1>
+    <h1>Inline element</h1>
 
     <!-- Element som inte hanterar innehållet på en egen rad -->
 
     <p>
         <!-- b: fet stil -->
-        Allt är inte <b>guld</b> som glimmar
+        Allt är inte <b>guld</b> som glimmar.
     </p>
 
-
     <p>
-        <!-- strong: fet stil men med betydelse - se https://developer.mozilla.org/en-US/docs/Web/HTML/Element -->
-        Allt är inte <strong>guld</strong> som glimmar
+        <!-- strong: fet stil - men med betydelse - se https://developer.mozilla.org/en-US/docs/Web/HTML/Element -->
+        Allt är inte <strong>guld</strong> som glimmar.
     </p>
 
     <hr>
 
     <p>
-        <!-- i: kursiv stil "italic" -->
-        Bättre <i>en fågel</i> i handen än 10 i skogen
+        <!-- i: kursiv stil 'italic' -->
+         <!-- em: kursiv stil med ökad betydelse -->
+        Bättre <i>en fågel</i> i handen än 10 i skogen.
     </p>
 
+
     <p>
-        <!-- u: understruken stil (finns bättre sätt att markera ord) -->
-        Alla <u>goda</u> ting är 3
+        <!-- u: understruken stil - underscore (finns bättre sätt att markera ord...)-->
+        Alla <u>goda</u> ting är tre.
     </p>
 
     <p>
         <!-- kombinera flera inline element -->
-        <i> Alla <strong> vägar </strong> bär till Rom </i>
+        <!-- se till att element öppnas och stängs i rätt ordning -->
+        <i>Alla <strong>vägar</strong> bär till Rom.</i>
     </p>
 
     <p>
-        <!-- mark: markera - highlight - se https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark -->
-        Borta bra men <mark> hemma </mark> bäst
+        <!-- mark: markera - highlight - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark -->
+        Borta bra med <mark>hemma</mark> bäst.
     </p>
 
     <p>
-        <!-- q: automatiska fnuttar - citatecken -->
-        <q> Den enes död är den andres bröd </q>
-        <!-- br: radbrytning, används sparsamt -->
+        <!-- q: automatiska fnuttar - typografiska citattecken -->
+        <q>Den enes död är den andres bröd.</q>
+        
+        <!-- br: radbrytning - används sparsamt... -->
         <br>
-        "Det som göms i snö kommer upp i tö"
+        <!-- manuellt med vanliga citattecken -->
+        "Det som göms i snör kommer upp i tö."
     </p>
 
-    <hr>
+    <!-- Uppgift: På egen hand koda 3 andra inline element - välj själv vilka från https://developer.mozilla.org/en-US/docs/Web/HTML/Element -->
+
+    <p>
+        <!-- samp: output från datorprogram -->
+        Efter regn kommer <samp>solsken</samp> . 
+    </p>
+
+
+    <p>
+        <!-- s: genomstruken stil -->
+        Gräv inte upp större sten än du kan bära.
+        <br>
+        <s>Gräv där du står.</s>  
+    </p>
+
+    <p>
+        <!-- small: mindre text -->
+        Gammal är <small>äldst.</small> 
+    </p>
+
+    <p>
+        <!-- big: ett element som inte längre bör användas (använd CSS ), fortsatt har webbläsare stöd för elementet -->
+        Genväg är ofta <big>senväg</big> .
+    </p>
+
+    <p>
+        <!-- marquee: vandrande text - förlegat element som fortfarande har stöd i webbläsare - men som inte ska användas -->
+        <!-- <marquee behavior="" direction="up">Först till kvarn får mala.</marquee> -->
+    </p>
+
+
+    <p>
+        <!-- time: ett element som kan användas för att visa detaljer kring ett datum -->
+        Höstlovet på en folkhögskola börjar <time datetime="2024-10-28">28 oktober 2024</time> - vecka 44.
+    </p>
 
     <p>
         <!-- span: ett av de vanligaste inline elementen på webben -->
-        <!-- elementet visar inte något utseendemässigt, det används för CSS och Javascript, se - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span  -->
-        Se men<span> inte röra</span>
+         <!-- elementet visar inte ngn utseendemässig detalj, det används för CSS och JavaScript -->
+        Se men <span>inte röra...</span> 
     </p>
 
     <p>
         <!-- kbd: kan användas för att ex visa hur man markerar text i ett dokument -->
         <!-- visuellt så används förvalt ett monospace teckensnitt, annan layout kan göras med CSS -->
-       För att markera allt på en sida kan man ge tangentbordskommandot <kbd>Ctrl</kbd> + <kbd>A</kbd>
+
+        För att markera allt på en sida kan man ge tangentbordskommandot <kbd>Ctrl</kbd> + <kbd>A</kbd>
+        
     </p>
 
     <p>
-        <!-- details: summary: element för att visa ett extra innehåll utifrån en summering -->
+        <!-- ruby: kan användas för att förtydliga ngt - exempel hur ngt uttalas -->
+        <ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+    </p>
+
+    <p>
+        <!-- detatils: summary: element för att visa ett extra innehåll utifrån en summer -->
         <details>
             <summary>Spegel, spegel på väggen där...</summary>
-            Säg mig vem som vackrast i landet är...
-            
-         </details>
+            Säg mig vem som vackrast i världen är....
+        </details>
     </p>
 
-
-    <p> <b> Uppgift </b> </p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GIhcL8K4shg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        <!-- iframe: visar en annan hemsida/del utav hemsida på ens egna hemsida, tex en youtube video, en karta etc -->
-    </iframe>
-
-    <br>
-
-    <p>
-         <!-- time: kan visa detaljer datum eller klockslag  -->
-         Höstlovet på en folkhögskola börjar <time datetime="2024-10-28">28 oktober 2024</time>  - vecka 44
-    
-    </p>
-
-    <footer>
-        <!-- footer: är längst ned på en hemsida -->
-        <p>
-            Footer: Är längst ned på en hemsida
-        </p>
-    </footer>
 
 
 </body>
-
 </html>
