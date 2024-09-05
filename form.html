@@ -17,10 +17,10 @@
 
     <nav>
         <a href="/">Startsida</a> |
-        <a href="block-elements.html">Block element</a> |
-        <a href="semantic-elements.html">Semantiska element</a> |
+        <a href="block_elements.html">Block element</a> |
+        <a href="semantic_elements.html">Semantiska element</a> |
         <a href="media.html">Bilder, video ...</a>
-        <a href="inline-elements.html">Inline elements</a>
+        <a href="inline_elements.html">Inline elements</a>
         <a href="form.html">Formulär</a>
         <a href="gallery.html">Galleri</a>
     </nav>
@@ -30,13 +30,15 @@
 
     <h1>Ett formulär för att skicka data</h1>
 
+    <!-- OBS - i koden nedan används elementet p för att skapa 'luft' mellan olika fält -->
     <!-- OBS - elementet br används här nedan för att få bättre layout, en layout som istället gör med CSS senare -->
 
+    <!-- placeholder: ett attribut som kan användas för att förtydliga vad som ska anges. förvald text -->
 
     <!-- form: omslutande element för ett formulär -->
     <!-- form method ska oftast vara 'post', men i VS Code Live Server ger det ett http error:405 -->
     <!-- använd här method 'get' -->
-    <form action="" method="post">
+    <form action="" method="get">
 
         <!-- input: fält med olika möjligheter via attributet type -->
 
@@ -52,13 +54,13 @@
         <p>
             <label for="first_name">Förnamn:</label>
             <br>
-            <input type="text" name="first_name" id="first_name">
+            <input type="text" name="first_name" id="first_name" placeholder="Skriv ditt tilltalsnamn">
         </p>
 
         <p>
             <label for="last_name">Efternamn:</label>
             <br>
-            <input type="text" name="last_name" id="last_name" required>
+            <input type="text" name="last_name" id="last_name">
         </p>
 
         <p>
@@ -103,6 +105,37 @@
             </select>
         </p>
 
+        <p>
+        <fieldset>
+            <legend>Kontakta mig i första hand via</legend>
+
+            <!-- input radio: ange samma name attributs värde för olika val  -->
+            <!-- ange attributet 'value' med det värde som ska skickas -->
+            <!-- ange attributet 'checked' för ett värde som ska vara förvalt -->
+            <input type="radio" name="contact" id="phone" value="phone"><label for="phone">Mobil</label>
+            <br>
+
+            <input type="radio" name="contact" id="mail" value="mail" checked><label for="mail">E-post</label>
+        </fieldset>
+        </p>
+
+        <!-- textarea: fritextfält -->
+        <p>
+            <label for="letter">Personligt brev</label>
+            <br>
+            <textarea name="letter" id="letter" rows="10" cols="40"></textarea>
+        </p>
+
+
+
+        <!-- exempel på hur man kodar ett val som måste bekräftas pga  -->
+        <p>
+        <fieldset>
+            <legend>Personuppgifter</legend>
+            <input type="checkbox" name="gdpr" id="gdpr" required><label for="gdpr">Jag förstår att uppgifter lagras om
+                mig.</label>
+        </fieldset>
+        </p>
 
         <input type="submit" value="Skicka">
         <input type="reset" value="Nollställ">

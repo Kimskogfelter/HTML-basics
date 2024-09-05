@@ -18,10 +18,10 @@
 
     <nav>
         <a href="/">Startsida</a> |
-        <a href="block-elements.html">Block element</a> |
-        <a href="semantic-elements.html">Semantiska element</a> |
+        <a href="block_elements.html">Block element</a> |
+        <a href="semantic_elements.html">Semantiska element</a> |
         <a href="media.html">Bilder, video ...</a>
-        <a href="inline-elements.html">Inline elements</a>
+        <a href="inline_elements.html">Inline elements</a>
         <a href="form.html">Formulär</a>
         <a href="gallery.html">Galleri</a>
     </nav>
@@ -184,6 +184,87 @@
 
         <li>Päron</li>
     </ul>
+
+
+    <hr>
+    <!-- tabell i HTML -->
+
+    <!-- table: element som skapar en tabell initialt -->
+    <!-- attributet 'border' ska inte användas, men webbläsare har fortsatt stöd för layout -->
+    <table border="1" width="400">
+
+        <!-- tr: table row - skapar en rad i tabellen -->
+        <tr>
+
+            <!-- td: table data - en cell / ruta i tabellen -->
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Consequuntur.</td>
+            <td>Magni!</td>
+        </tr>
+        <tr>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Sapiente, quod consectetur.</td>
+            <td>Inventore, reiciendis iure.</td>
+        </tr>
+
+    </table>
+
+    <!-- en tabell över de nordiska länderna - antal invånare i varje land -->
+
+
+    <table width="400" border="1">
+        <caption>En tabell över de nordiska länderna</caption>
+        <thead>
+            <tr>
+                <th align="left">Land</th>
+                <th>Antal invånare</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sverige</td>
+                <td>10 milj</td>
+            </tr>
+            <tr>
+                <td>Danmark</td>
+                <td>5 milj</td>
+            </tr>
+            <tr>
+                <td>Finland</td>
+                <td>5 milj</td>
+            </tr>
+            <tr>
+                <td>Norge</td>
+                <td>5 milj</td>
+            </tr>
+            <tr>
+                <td>Island</td>
+                <td>0,5 milj</td>
+            </tr>
+            <tr>
+                <!-- i HTML finns ngt som kallas för entity - ett ex är ett tomt tecken: &nbsp; -->
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- attributet colspan slår samman kolumner -->
+                <td colspan="2">Statistik över antalet invånare</td>
+            </tr>
+        </tfoot>
+    </table>
+
 
 
 
